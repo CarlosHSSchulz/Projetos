@@ -40,8 +40,53 @@
     display: flex;
     justify-content: center;
 }
-.texto-um img{
+.texto-um{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    width: 360px;
+    font-size: 26px;
+    
+}
+.texto-dois{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    width: 360px;
+    font-size: 26px;
+    position: relative;
+}
+.img-industria{
     display: none;
+}
+.saber-mais{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 40px;
+    width: 360px;
+    font-size: 26px;
+    
+}
+.contact_GTC ul li{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 5px;
+    width: 360px;
+    font-size: 26px;
 }
 .desc_home .brands_logo {
         display: grid;
