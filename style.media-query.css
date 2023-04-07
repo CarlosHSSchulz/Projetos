@@ -22,25 +22,27 @@
     margin: 100px auto;
     left: 0px;
     right: 0px;
-    width: 550px;
+    width: 380px;
     height: 400px;
     overflow:hidden;
 }     
 .manual-navigation{
     position: relative;
-    width: 550px;
+    width: 380px;
     margin-top: -40px;
     display: flex;
     justify-content: center;
 }
 .navigation-auto{
     position: absolute;
-    width: 550px;
+    width: 380px;
     margin-top: 360px;
     display: flex;
     justify-content: center;
 }
-
+.texto-um img{
+    display: none;
+}
 .desc_home .brands_logo {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
