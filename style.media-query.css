@@ -26,6 +26,9 @@
 
 }
 
+.menu-faketrigger{
+    display: block;
+}
 .navbar .menu-faketrigger{
     position: absolute;
     z-index: 1000;
