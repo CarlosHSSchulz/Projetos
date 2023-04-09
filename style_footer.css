@@ -22,6 +22,13 @@ footer{
     font-size: 80px;
     color: #ec8e18;
 }
+
+#footer_content #footer_contact{
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 #footer_content{
     background-color:#f3f3f3 ;
     display: grid;
