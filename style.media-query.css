@@ -108,15 +108,26 @@
     left: 0px;
     right: 0px;
     width: 380px;
-    height: 400px;
+    height: 200px;
     overflow:hidden;
+    border-radius: 20px;
 }     
+.slides{
+    width: 400%;
+    height: 200px;
+    display: flex;
+    
+} 
 .manual-navigation{
     position: relative;
     width: 380px;
-    margin-top: -40px;
+    margin-top: -20px;
     display: flex;
     justify-content: center;
+}
+.navigation-auto div{
+    display: none;
+
 }
 .navigation-auto{
     position: absolute;
