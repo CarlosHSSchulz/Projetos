@@ -138,3 +138,48 @@ main{
 .color_GTC{
     color: #ec8e18;
 }
+#div-fixa{
+    position: fixed;
+    bottom: 50px;
+    margin: 0 20px;
+    background-color: rgb(89, 245, 122);
+    width: 230px;
+    border-radius: 50px;
+    cursor: pointer;
+    
+}
+#div-fixa a{
+    text-decoration: none;
+}
+#div-fixa img{
+    width: 50px;
+    height: 50px;
+}
+.flex-item{
+    display: flex;
+    align-items: center;
+    
+}
+.flex-item span{
+    padding: 10px;
+    font-weight: bold;
+    color: #040305;
+}
+.flutuar{
+    animation-name:flutuar ;
+    animation-duration: 0.7s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes flutuar {
+    from{
+        transform: translate3d(0, 0, 0);
+        filter: brightness(100%);
+    }
+    to {
+        transform: translate3d(0, -15px, 0);
+        filter: brightness(150%);
+    }
+}
