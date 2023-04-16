@@ -25,6 +25,9 @@
     width: 35px;
 
 }
+.menu-lines{
+    display:block;
+}
 .content_midia_desc{
     display: none;
 }

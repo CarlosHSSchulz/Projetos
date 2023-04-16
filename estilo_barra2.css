@@ -10,8 +10,7 @@ body{
 }
 
 .navbar{
-    display: flex;
-    
+    display: flex;   
     justify-content: space-around;
     text-align: center;
     padding: 20px 50px;
@@ -19,7 +18,9 @@ body{
     border-bottom: 1px solid #eee;
 }
 
-
+.menu-lines{
+    display: none;
+}
 
 .navbar_logo a {
     text-decoration: none;
@@ -69,7 +70,6 @@ body{
 
 .menu-faketrigger{
     display: none;
-    
 }
 
 .submenu_itens{
