@@ -17,6 +17,9 @@ html{
     width: 100%;
     background: linear-gradient(120deg, #ec8e18, #ae6540, rgb(240, 104, 0)  );
     height: 250px;
+    font-size: 35px;
+    text-align: center;
+    color: aliceblue;
 }
 .desc-produtos{
     display: flex;

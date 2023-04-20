@@ -111,29 +111,74 @@ body{
     align-items: center;
     text-align: center;
     justify-content: center;
-    max-width: 1200px;
-    padding: 10px;
+    width: 1200px;
+    padding: 15px;
     font-size: 36px;
 }
+.desc_home{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
 .desc_home .brands_logo {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     
 }
-.brands_logo img{
+.home_brands_orcamento{
+    display: flex;
+    background-image: url(./images/atendente-telemarketing.jpg);
+    height:500px;
+    width: 100%;
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+
+.link-pages-home .home_brands_orcamento a{
+    display: flex;
+    align-items: center;
+    margin-left: 200px;
+    width: 600px;
+    background-color: #eee.2;
+}
+.link-pages-home{
+    text-align: center;
+    margin-bottom: 0;
+}
+.link-pages-home h6{
+    font-size: 36px;
     
+}
+.home_brands_orcamento a{
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 200px;
+    text-decoration: none;
+    color: black;
+}
+.brands_logo img{
     padding: 30px;
     
 }
-main{
+
+
+.home_brands a{
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.home_brands a{
+    flex-direction: column;
     text-decoration: none;
     color: black;
-    padding: 40px;
+    padding: 80px;
+    
 }
 .color_GTC{
     color: #ec8e18;
