@@ -86,6 +86,34 @@
     margin-left: 0;
 }
 
+.box{
+    margin: auto;
+    height: 700px;
+    max-width: 380px;
+    padding: 15px;
+    border-radius: 15px;
+    color: black;
+}
+#data_nascimento{
+    border: none;
+    padding: 8px;
+    border-radius: 10px;
+    outline: none;
+    width: 120px;
+    background-color: #c1c1c1;
+}
+#submit{
+    background-image: linear-gradient(to right,rgb(253, 110, 0), rgb(173, 112, 41));
+    max-width: 400px;
+    width: 100%;
+    border:none;
+    padding: 15px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
 .desc-tela-produtos{
     display: flex;
     align-items: flex-start;

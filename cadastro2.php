@@ -1,0 +1,292 @@
+<?php
+
+    if(isset($_POST['submit'])){
+    //        print_r('Nome: ' .$_POST['nome']);
+      //      print_r("<br>");
+        //    print_r('Email: ' .$_POST['email']);
+          //  print_r("<br>");
+            //print_r('Telefone: ' .$_POST['telefone']);
+    //        print_r("<br>");
+      //      print_r('Genero: ' .$_POST['genero']);
+        //    print_r("<br>");
+          //  print_r('Data de nascimento: ' .$_POST['data_nascimento']);
+            //print_r("<br>");
+    //        print_r('Cidade: ' .$_POST['cidade']);
+      //      print_r("<br>");
+        //    print_r('estado: ' .$_POST['estado']);
+          //  print_r("<br>");
+            //print_r('endereco: ' .$_POST['endereco']);
+
+            include_once('config.php');
+
+            $nome = $_POST['nome'];
+            $email = $_POST['email'];
+            $telefone = $_POST['telefone'];
+            $sexo = $_POST['genero'];
+            $data_nasc = $_POST['data_nascimento'];
+            $cidade = $_POST['cidade'];
+            $estado = $_POST['estado'];
+            $endereco = $_POST['endereco'];
+
+            $result = mysqli_query($conexao, "INSERT INTO usuarios(nome,email,telefone,sexo,data_nasc,cidade,estado,endereco)
+            values('$nome', '$email', '$telefone', '$sexo', '$data_nasc ', '$cidade', '$estado ', '$endereco')");
+    }
+
+?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./estilo_barra2.css">
+    <link rel="stylesheet" href="./style_footer.css">
+    <link rel="stylesheet" href="./style-barra-tarefas.css">
+    <link rel="stylesheet" href="./style.media-query.css" media="all">
+    <link rel="stylesheet" href="./style.media-query2.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style_cadastro2.css">
+    <title>Cadastro</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <input type="checkbox" class="menu-faketrigger" />
+            <div class="menu-lines">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="navbar_logo">
+                <a href="./barra_de_tarefas2.html">
+                        <img src="./images/logo.png.png"/>
+                </a>
+            </div>
+            <ul class="navbar_menu">
+                <li class="navbar_item">
+                    <a href="./barra_de_tarefas2.html" class="dropdown">Home</a>
+                </li>
+                <li class="navbar_item">
+                    <a href="#" class="dropdown">Empresa</a>
+                    <div class="submenu">
+                        <div class="submenu_itens">
+                            <div class="submenu_item">
+                                <p><i class="fa fa-sign-in" aria-hidden="true"></i></p>
+                                <a href="./tela_quem_somos.html"><div class="organized">
+                                    <h4>A GTC</h4>
+                                    <h5>Quem somos e onde queremos chegar</h5>
+                                </div></a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                            
+                <li class="navbar_item">
+                    <a href="#" class="dropdown">Produtos</a>
+                    <div class="submenu">
+                        <div class="submenu_itens">
+                            <a href="./tela_produtos.html">
+                            <div class="submenu_item">
+                                <p><i class="fa fa-cogs" aria-hidden="true"></i></p>
+                                <div class="organized">
+                                <h4>Automação</h4>
+                                <h5>Soluções de automação: Desde as mais simples, até as mais complexas!</h5>
+                                </div>
+                            </div>
+                            </a>
+                            <a href="./tela_produtos.html">
+                            <div class="submenu_item">
+                                <p><i class="fa fa-check-circle-o" aria-hidden="true"></i></p>
+                                <div class="organized">
+                                <h4>EPI's</h4>
+                                
+                                <h5>As melhores marcas e especialistas em um só lugar!</h5>
+                                </div>
+                            </div>
+                            </a>
+                            <a href="./tela_produtos.html"> 
+                            <div class="submenu_item">
+                                <p><i class="fa fa-lightbulb-o" aria-hidden="true"></i></p>
+                                <div class="organized">
+                                <h4>Iluminação</h4>
+                                <h5>Linha completa de produtos para Iluminação!</h5>
+                                </div>
+                            </div>
+                            </a>
+                            <a href="./tela_produtos.html">
+                            <div class="submenu_item">
+                                <p><i class="fa fa-server" aria-hidden="true"></i></p>
+                                <div class="organized">
+                                <h4>DataCom</h4>
+                                <h5>Soluções inteligentes voltadas ao mercado de conectividade industrial e corporativo!</h5>
+                                </div>
+                            </div>
+                            </a>
+                            <a href="./tela_produtos.html">
+                            <div class="submenu_item">
+                                <p><i class="fa fa-wrench" aria-hidden="true"></i></p>
+                                <div class="organized">
+                                <h4>Ferramentas</h4>
+                                <h5>Os melhores itens para aumentar a produtividade!</h5>
+                                </div>
+                            </div>
+                            </a>
+                            <a href="./tela_produtos.html">
+                            <div class="submenu_item">
+                                <p><i class="fa fa-plug" aria-hidden="true"></i></p>
+                                <div class="organized">
+                                <h4>Materiais Elétricos</h4>
+                                <h5>Fios, cabos, interruptores e muito mais!</h5>
+                                </div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="navbar_item">
+                    <a href="#" class="dropdown">Orçamento</a>
+                    <div class="submenu">
+                        <div class="submenu_itens">
+                            <div class="submenu_item">
+                                <p><i class="fa-solid fa-cart-shopping"></i></p>
+                                <a href="./tela_orcamento.html"><div class="organized">
+                                    <h4>Orçamentos</h4>
+                                    <h5>Solicite um Orçamento</h5>
+                                </div></a>
+                            </div>
+                        </div>
+                    </div>
+                </li>              
+                <li class="navbar_item"><a href="./tela_login.html">Entrar</a></li>
+            </ul>  
+        </nav>
+    </header>
+    <main>
+        <div class="box">
+            <form method="POST" action="cadastro2.php">
+                    <legend class="legendCadastro"><b>Cadastro de Usuários</b></legend>
+                    <br>
+                    <div class="inputBox">
+                        <input type="text" name="nome" id="nome" class="inputUser" required>
+                        <label for="nome" class="labelInput">Nome Completo</label>
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <input type="text" name="email" id="email" class="inputUser" required>
+                        <label for="email" class="labelInput">Email</label>
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <input type="tel" name="telefone" id="telefone" class="inputUser" required>
+                        <label for="telefone" class="labelInput">Telefone</label>
+                    </div>
+                    <br>
+                    <p>Sexo:</p>
+                    <br>
+                    <input type="radio" id="feminino" name="genero" value="feminino" required>
+                    <label for="feminino">Feminino</label><br>
+                    <input type="radio" id="masculino" name="genero" value="masculino" required>
+                    <label for="masculino">Masculino</label><br>
+                    <input type="radio" id="outro" name="genero" value="outro" required>
+                    <label for="outro">Outro</label><br>
+                        <br><br>
+                        <label for="data_nascimento"><b>Data de nascimento:</b></label>
+                        <input type="date" name="data_nascimento" id="data_nascimento" required>
+                    <br><br>
+                    <div class="inputBox">
+                        <input type="text" name="cidade" id="cidade" class="inputUser" required>
+                        <label for="cidade" class="labelInput">Cidade</label>
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <input type="text" name="estado" id="estado" class="inputUser" required>
+                        <label for="estado" class="labelInput">Estado</label>
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <input type="text" name="endereco" id="endereco" class="inputUser" required>
+                        <label for="endereco" class="labelInput">Endereço</label>
+                    </div>
+                    <br><br>
+                    <input type="submit" name="submit" value="Gravar" id="submit"/>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div id="footer_content">
+            <div id="footer_contact">
+                <h1>GTC</h1>
+                <p>Suprimentos Industriais</p>
+                <div id="footer_social_media">
+                    <a href="https://www.instagram.com/gtcsuprimentos/?igshid=YmMyMTA2M2Y%3D" class="footer_link" id="instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#" class="footer_link" id="facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="https://wa.me/5511991272761?text=Olá como está?" class="footer_link" id="whatsapp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+            <ul class="list_decoration">
+                <h1>Empresa</h1>
+                <li>
+                    <p class="link_arrow"><i class="fa-solid fa-chevron-right"></i></p>
+                    <a href="./tela_quem_somos.html" class="Product_link">A GTC</a>
+                </li>
+            </ul>
+            <ul class="list_decoration">
+                <h1>Produtos</h1>
+                <li>
+                    <p class="link_arrow"><i class="fa-solid fa-chevron-right"></i></p>
+                    <a href="#" class="Product_link">Automação</a>
+                </li>
+                <li>
+                    <p class="link_arrow"><i class="fa-solid fa-chevron-right"></i></p>
+                    <a href="#" class="Product_link">EPI's</a>
+                </li>
+                <li>
+                    <p class="link_arrow"><i class="fa-solid fa-chevron-right"></i></p>
+                    <a href="#" class="Product_link">Iluminação</a>
+                </li>
+                <li>
+                    <p class="link_arrow"><i class="fa-solid fa-chevron-right"></i></p>
+                    <a href="#" class="Product_link">DataCom</a>
+                </li>
+                <li>
+                    <p class="link_arrow"><i class="fa-solid fa-chevron-right"></i></p>
+                    <a href="#" class="Product_link">Ferramentas</a>
+                </li>
+                <li>
+                    <p class="link_arrow"><i class="fa-solid fa-chevron-right"></i></p>
+                    <a href="#" class="Product_link">Materiais Elétricos</a>
+                </li>
+            </ul>
+            <ul class="list_decoration">
+                <h1>Orçamento</h1>
+                <li>
+                    <p class="link_arrow"><i class="fa-solid fa-chevron-right"></i></p>
+                    <a href="./tela_orcamento.html" class="Product_link">Solicite um Orçamento</a>
+                </li>
+            </ul>
+        </div>
+        <div id="footer_copyrigth">
+            &#169
+            2023 All Rigths Reserved
+        </div>
+    </footer>
+    <div id="div-fixa" class="flutuar" data-shrink="yes">
+        <a href="https://wa.me/5511991272761?text=Olá como está?" target="_blank">
+            <div class="flex-item">
+                <img src="./images/whatsapp-icon.png" alt="Fale conosco via Whatsapp" title="Fale conosco via Whatsapp"/>
+                <span>Converse Conosco!</span>
+            </div>
+        </a>
+    </div>
+    <script src="./script-cadastro.js"></script>
+    <script src="barra2.js"></script>
+</body>
+</html>

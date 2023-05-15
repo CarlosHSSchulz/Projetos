@@ -1,14 +1,18 @@
+<?php
+
+    if(isset($_POST['submit'])){
+        print_r($_POST['nome']);
+        print_r($_POST['genero']);
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./style_quem_somos.css">
-    <link rel="stylesheet" href="./Style-login.css">
     <link rel="stylesheet" href="./estilo_barra2.css">
     <link rel="stylesheet" href="./style_footer.css">
     <link rel="stylesheet" href="./style-barra-tarefas.css">
@@ -16,9 +20,8 @@
     <link rel="stylesheet" href="./style.media-query2.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./style_orcamento.css">
-    <link rel="stylesheet" href="./style_cadastro2.css"> 
-    <title>Login</title>
+    <link rel="stylesheet" href="./style_cadastro2.css">
+    <title>Cadastro</title>
 </head>
 <body>
     <header>
@@ -76,7 +79,7 @@
                                 </div>
                             </div>
                             </a>
-                            <a href="./tela_produtos.html">
+                            <a href="./tela_produtos.html"> 
                             <div class="submenu_item">
                                 <p><i class="fa fa-lightbulb-o" aria-hidden="true"></i></p>
                                 <div class="organized">
@@ -128,97 +131,125 @@
                             </div>
                         </div>
                     </div>
-                </li>
-                <li class="navbar_item"><a href="/tela_login.html">Entrar</a></li>
+                </li>              
+                <li class="navbar_item"><a href="./tela_login.html">Entrar</a></li>
             </ul>  
         </nav>
     </header>
-        <div class="container">
-            <div class="card">
-                <h1>Entrar</h1>
-                <div class="label-float">
-                    <input type="text" id="usuario" required>
-                    <label for="usuario">Usuário</label>
-                </div>
-                <div class="label-float">
-                    <input type="password" id="senha" paceholder="" required>
-                    <label for="senha">Senha</label>
-                    <i class="fa fa-eye" onclick="verSenha()" aria-hidden="true"></i>
-                </div>
-                <input type="submit" name="submit" id="submit"/>
-                <div class="justify-center">
-                    <hr>
-                </div>
-                <p>Não tem uma conta? 
-                    <a href="./cadastro2.html" class="link_cadastro">Cadastre-se</a>
-                </p>
-            </div>
-            
-        </div>
-        
-    <footer>
-                <div id="footer_content">
-                    <div id="footer_contact">
-                        <h1>GTC</h1>
-                        <p>Suprimentos Industriais</p>
-                        <div id="footer_social_media">
-                            <a href="https://www.instagram.com/gtcsuprimentos/?igshid=YmMyMTA2M2Y%3D" class="footer_link" id="instagram">
-                                <i class="fa-brands fa-instagram"></i>
-                            </a>
-                            <a href="#" class="footer_link" id="facebook">
-                                <i class="fa-brands fa-facebook-f"></i>
-                            </a>
-                            <a href="https://wa.me/5511991272761?text=Olá como está?" class="footer_link" id="whatsapp">
-                                <i class="fa-brands fa-whatsapp"></i>
-                            </a>
-                        </div>
+    <main>
+        <div class="box">
+            <form method="post" action="grava.java">
+                    <legend class="legendCadastro"><b>Cadastro de Usuários</b></legend>
+                    <br>
+                    <div class="inputBox">
+                        <input type="text" name="nome" id="nome" class="inputUser" required>
+                        <label for="nome" class="labelInput">Nome Completo</label>
                     </div>
-                    <ul class="list_decoration">
-                        <h1>Empresa</h1>
-                        <li>
-                            <p class="link_arrow"><i class="fa-solid fa-chevron-right"></i></p>
-                            <a href="./tela_quem_somos.html" class="Product_link">A GTC</a>
-                        </li>
-                    </ul>
-                    <ul class="list_decoration">
-                        <h1>Produtos</h1>
-                        <li>
-                            <p class="link_arrow"><i class="fa-solid fa-chevron-right"></i></p>
-                            <a href="#" class="Product_link">Automação</a>
-                        </li>
-                        <li>
-                            <p class="link_arrow"><i class="fa-solid fa-chevron-right"></i></p>
-                            <a href="#" class="Product_link">EPI's</a>
-                        </li>
-                        <li>
-                            <p class="link_arrow"><i class="fa-solid fa-chevron-right"></i></p>
-                            <a href="#" class="Product_link">Iluminação</a>
-                        </li>
-                        <li>
-                            <p class="link_arrow"><i class="fa-solid fa-chevron-right"></i></p>
-                            <a href="#" class="Product_link">DataCom</a>
-                        </li>
-                        <li>
-                            <p class="link_arrow"><i class="fa-solid fa-chevron-right"></i></p>
-                            <a href="#" class="Product_link">Ferramentas</a>
-                        </li>
-                        <li>
-                            <p class="link_arrow"><i class="fa-solid fa-chevron-right"></i></p>
-                            <a href="#" class="Product_link">Materiais Elétricos</a>
-                        </li>
-                    </ul>
-                    <ul class="list_decoration">
-                        <h1>Orçamento</h1>
-                        <li>
-                            <p class="link_arrow"><i class="fa-solid fa-chevron-right"></i></p>
-                            <a href="./tela_orcamento.html" class="Product_link">Solicite um Orçamento</a>
-                        </li>
-                    </ul>
+                    <br><br>
+                    <div class="inputBox">
+                        <input type="text" name="email" id="email" class="inputUser" required>
+                        <label for="email" class="labelInput">Email</label>
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <input type="tel" name="telefone" id="telefone" class="inputUser" required>
+                        <label for="telefone" class="labelInput">Telefone</label>
+                    </div>
+                    <br>
+                    <p>Sexo:</p>
+                    <br>
+                    <input type="radio" id="feminino" name="genero" value="feminino" required>
+                    <label for="feminino">Feminino</label><br>
+                    <input type="radio" id="masculino" name="genero" value="masculino" required>
+                    <label for="masculino">Masculino</label><br>
+                    <input type="radio" id="outro" name="genero" value="outro" required>
+                    <label for="outro">Outro</label><br>
+                        <br><br>
+                        <label for="data_nascimento"><b>Data de nascimento:</b></label>
+                        <input type="date" name="data_nascimento" id="data_nascimento" required>
+                    <br><br>
+                    <div class="inputBox">
+                        <input type="text" name="cidade" id="cidade" class="inputUser" required>
+                        <label for="cidade" class="labelInput">Cidade</label>
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <input type="text" name="estado" id="estado" class="inputUser" required>
+                        <label for="estado" class="labelInput">Estado</label>
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <input type="text" name="endereco" id="endereco" class="inputUser" required>
+                        <label for="endereco" class="labelInput">Endereço</label>
+                    </div>
+                    <br><br>
+                    <input type="submit" name="submit" value="Gravar" id="submit"/>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div id="footer_content">
+            <div id="footer_contact">
+                <h1>GTC</h1>
+                <p>Suprimentos Industriais</p>
+                <div id="footer_social_media">
+                    <a href="https://www.instagram.com/gtcsuprimentos/?igshid=YmMyMTA2M2Y%3D" class="footer_link" id="instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#" class="footer_link" id="facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="https://wa.me/5511991272761?text=Olá como está?" class="footer_link" id="whatsapp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
                 </div>
-                <div id="footer_copyrigth">
-                    &#169
-                    2023 All Rigths Reserved
-                </div>
+            </div>
+            <ul class="list_decoration">
+                <h1>Empresa</h1>
+                <li>
+                    <p class="link_arrow"><i class="fa-solid fa-chevron-right"></i></p>
+                    <a href="./tela_quem_somos.html" class="Product_link">A GTC</a>
+                </li>
+            </ul>
+            <ul class="list_decoration">
+                <h1>Produtos</h1>
+                <li>
+                    <p class="link_arrow"><i class="fa-solid fa-chevron-right"></i></p>
+                    <a href="#" class="Product_link">Automação</a>
+                </li>
+                <li>
+                    <p class="link_arrow"><i class="fa-solid fa-chevron-right"></i></p>
+                    <a href="#" class="Product_link">EPI's</a>
+                </li>
+                <li>
+                    <p class="link_arrow"><i class="fa-solid fa-chevron-right"></i></p>
+                    <a href="#" class="Product_link">Iluminação</a>
+                </li>
+                <li>
+                    <p class="link_arrow"><i class="fa-solid fa-chevron-right"></i></p>
+                    <a href="#" class="Product_link">DataCom</a>
+                </li>
+                <li>
+                    <p class="link_arrow"><i class="fa-solid fa-chevron-right"></i></p>
+                    <a href="#" class="Product_link">Ferramentas</a>
+                </li>
+                <li>
+                    <p class="link_arrow"><i class="fa-solid fa-chevron-right"></i></p>
+                    <a href="#" class="Product_link">Materiais Elétricos</a>
+                </li>
+            </ul>
+            <ul class="list_decoration">
+                <h1>Orçamento</h1>
+                <li>
+                    <p class="link_arrow"><i class="fa-solid fa-chevron-right"></i></p>
+                    <a href="./tela_orcamento.html" class="Product_link">Solicite um Orçamento</a>
+                </li>
+            </ul>
+        </div>
+        <div id="footer_copyrigth">
+            &#169
+            2023 All Rigths Reserved
+        </div>
     </footer>
     <div id="div-fixa" class="flutuar" data-shrink="yes">
         <a href="https://wa.me/5511991272761?text=Olá como está?" target="_blank">
@@ -228,7 +259,7 @@
             </div>
         </a>
     </div>
-        <script src="./script-cadastro.js"></script>
-        <script src="barra2.js"></script>
+    <script src="./script-cadastro.js"></script>
+    <script src="barra2.js"></script>
 </body>
 </html>

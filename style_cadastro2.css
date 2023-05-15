@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    
+}
+.box{
+    margin: auto;
+    height: 750px;
+    width: 500px;
+    padding: 15px;
+    border-radius: 15px;
+    color: black;
+}
+
+.legendCadastro{
+    font-size: 26px;
+    text-align: center;
+    color: #272262;
+    padding: 20px;
+}
+.inputBox{
+    position: relative;
+}
+.inputUser{
+    background: none;
+    border: none;
+    border-bottom: 1px solid #272262;
+    outline: none;
+    width: 100%;
+    font-size: 15px;
+    letter-spacing: 2px;
+    color: black;
+    padding: 2px;
+
+}
+.labelInput{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    pointer-events: none;
+    transition: .5s;
+    
+}
+.inputUser:focus ~ .labelInput,
+.inputUser:valid ~ .labelInput{
+    top: -20px;
+    font-size: 12px;
+    color: #ec8e18;
+}
+#data_nascimento{
+    border: none;
+    padding: 8px;
+    border-radius: 10px;
+    outline: none;
+    width: 200px;
+    background-color: #c1c1c1;
+}
+#submit{
+    background-image: linear-gradient(to right,rgb(253, 110, 0), rgb(173, 112, 41));
+    width: 100%;
+    border:none;
+    padding: 15px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+#submit:hover{
+    background-image: linear-gradient(to right,rgb(220, 110, 0), rgb(130, 112, 41));
+}
