@@ -195,6 +195,17 @@
                         <label for="data_nascimento"><b>Data de nascimento:</b></label>
                         <input type="date" name="data_nascimento" id="data_nascimento" required>
                     <br><br>
+                    <br><br>
+                    <div class="inputBox">
+                        <input type="password" name="password" id="password" class="inputUser" required>
+                        <label for="password" class="labelInput">Crie uma senha</label>
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <input type="password" name="confirm_password" id="confirm_password" class="inputUser" required>
+                        <label for="confirm_password" class="labelInput">Digite novamente a senha escolhida</label>
+                    </div>
+                    <br><br>
                     <div class="inputBox">
                         <input type="text" name="cidade" id="cidade" class="inputUser" required>
                         <label for="cidade" class="labelInput">Cidade</label>

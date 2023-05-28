@@ -10,7 +10,7 @@ body{
 }
 .box{
     margin: auto;
-    height: 750px;
+    height: 900px;
     width: 500px;
     padding: 15px;
     border-radius: 15px;
@@ -72,4 +72,8 @@ body{
 }
 #submit:hover{
     background-image: linear-gradient(to right,rgb(220, 110, 0), rgb(130, 112, 41));
+}
+.inputBox i{
+    position: absolute;
+    right: 10px;
 }
