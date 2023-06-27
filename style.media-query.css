@@ -3,7 +3,328 @@
     padding: 0;
     box-sizing: border-box;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 320px) {
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 50px;
+        align-items: center;
+        border-bottom: 1px solid #eee;
+        width: auto;
+    }
+    .navbar_menu{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .navbar .menu-lines{
+        position: absolute;
+        z-index: 998;
+        height: 35px;
+        width: 35px;
+    
+    }
+    .menu-lines{
+        display:block;
+    }
+    .content_midia_desc{
+        display: none;
+    }
+    .menu-faketrigger{
+        display: block;
+    }
+    .navbar .menu-faketrigger{
+        position: absolute;
+        z-index: 1000;
+        height: 35px;
+        width: 35px;
+        opacity: 0;
+        cursor: pointer;
+    }
+    
+    .navbar_logo a img{
+        max-width: 100px;
+        max-height: 100px;
+        margin-left: 150px;
+    }
+    
+    .navbar_menu .navbar_item{
+        padding: 20px;
+        
+    }
+    
+    .navbar .menu-faketrigger:checked ~ .menu-lines span{
+        background-color: #232323;
+    }
+    
+    .navbar .menu-faketrigger:checked ~ .menu-lines span:nth-child(1){
+        transform-origin: 0% 0%;
+        transform: rotate(45deg) scaleX(1.25);
+    }
+    
+    .navbar .menu-faketrigger:checked ~ .menu-lines span:nth-child(2){
+        opacity: 0;
+    }
+    
+    .navbar .menu-faketrigger:checked ~ .menu-lines span:nth-child(3){
+        transform-origin: 0% 100%;
+        transform: rotate(-45deg) scaleX(1.25);
+    }
+    
+    .navbar .menu-lines span{
+        display: block;
+        width: 35px;
+        height: 5px;
+        margin-bottom: 10px;
+        background-color: #ec8e18;
+        border-radius: 3px;
+        transition: all ease .2s;
+    }
+    
+    .navbar .menu-faketrigger:checked ~ ul{
+        margin-left: 0;
+    }
+    
+    .box{
+        margin: auto;
+        height: 700px;
+        max-width: 380px;
+        padding: 15px;
+        border-radius: 15px;
+        color: black;
+    }
+    #data_nascimento{
+        border: none;
+        padding: 8px;
+        border-radius: 10px;
+        outline: none;
+        width: 120px;
+        background-color: #c1c1c1;
+    }
+    #submit{
+        background-image: linear-gradient(to right,rgb(253, 110, 0), rgb(173, 112, 41));
+        max-width: 320px;
+        width: 100%;
+        border:none;
+        padding: 15px;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+    
+    .desc-tela-produtos{
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        margin: auto;
+        margin-top: 50px;
+    }
+    .desc-produtos{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 50px;
+        width: 100%;
+        margin: auto;
+        font-size: 26px;
+    }
+    .menu-tela-produtos ul li a{
+        text-decoration: none;
+        color: black;
+        width: 320px;
+        height: 40px;
+        padding: 10px;
+        font-size: 20px;
+        font-weight: 600;
+        
+    }
+    .menu-tela-produtos ul li{
+        list-style: none;
+        border: 4px solid rgba(0, 0, 0, 0.068);
+        border-radius: 10px;
+        margin: 5px;
+        margin-bottom: 10px;
+    }
+    .menu-tela-produtos ul{
+        display: flex;
+        justify-content: center;
+        width: 320px;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .desc_home h6{
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        width: 320px;
+        padding: 15px;
+        font-size: 36px;
+    }
+    .home_brands_orcamento {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: black;
+        padding: 80px;
+        background-image: none;
+    }
+    .link-pages-home .home_brands_orcamento a{
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        width: 320px;
+        background-color: #eee.2;
+    }
+    
+    .navbar ul{
+        position: absolute;
+        z-index: 997;
+        left: 0;
+        top: 0;
+        width: 380px;
+        height: calc (100vh - 100px);
+        padding-top: 100px;
+        background-color: #ededed;
+        margin-left: -380px;
+        transition: all ease .2s;
+        border-radius: 7px;
+    }
+    
+    .submenu_itens{
+        display: flex;
+        flex-direction: column;
+        padding-left: 20px;
+    }
+    
+    .slider{
+        margin: 100px auto;
+        left: 0px;
+        right: 0px;
+        width: 100%;
+        height: 200px;
+        overflow:hidden;
+        border-radius: none;
+    }     
+    .slides{
+        width: 400%;
+        height: 200px;
+        display: flex;
+        border-radius: none;
+    } 
+    .manual-navigation{
+        position: relative;
+        width: 100%;
+        margin-top: -20px;
+        display: flex;
+        justify-content: center;
+    }
+    .navigation-auto div{
+        display: none;
+    
+    }
+    .slide img{
+        width: 100%;
+        height: 200px;
+        border-radius: none;
+    }
+    .navigation-auto{
+        position: absolute;
+        width: 380px;
+        margin-top: 360px;
+        display: flex;
+        justify-content: center;
+    }
+    .texto-um{
+        display: flex;
+        align-items: center;
+        text-align: center;
+        margin: 0 auto;
+        padding-top: 40px;
+        padding-left: 40px;
+        padding-right: 40px;
+        width: 360px;
+        font-size: 26px;
+        
+    }
+    .texto-dois{
+        display: flex;
+        align-items: center;
+        text-align: center;
+        margin: 0 auto;
+        padding-top: 40px;
+        padding-left: 40px;
+        padding-right: 40px;
+        width: 360px;
+        font-size: 26px;
+        position: relative;
+    }
+    .img-industria{
+        display: none;
+    }
+    .saber-mais{
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        margin: 0 auto;
+        padding: 40px;
+        width: 360px;
+        font-size: 26px;
+        
+    }
+    .contact_GTC ul li{
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        margin: 0 auto;
+        padding: 5px;
+        width: 360px;
+        font-size: 26px;
+    }
+    .desc_home .brands_logo {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            
+    }
+    
+    #footer_content{
+            background-color:#f3f3f3 ;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-top: 50px;
+    }
+    .list_decoration{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .flex-item span{
+        display: none;
+    }
+    #div-fixa{
+        position: fixed;
+        bottom: 50px;
+        margin: 0 20px;
+        background-color: rgb(89, 245, 122);
+        width: 50px;
+        border-radius: 50px;
+        cursor: pointer;
+        
+    }
+}
+
+@media screen and (min-width: 321px) and ( max-width: 480px) {
 
 .navbar{
     display: flex;
@@ -11,6 +332,7 @@
     padding: 20px 50px;
     align-items: center;
     border-bottom: 1px solid #eee;
+    width: auto;
 }
 .navbar_menu{
     list-style: none;
@@ -46,12 +368,12 @@
 .navbar_logo a img{
     max-width: 100px;
     max-height: 100px;
-    margin-left: 220px;
+    margin-left: 200px;
 }
 
 .navbar_menu .navbar_item{
     padding: 20px;
-    margin-left: 10px;
+    
 }
 
 .navbar .menu-faketrigger:checked ~ .menu-lines span{

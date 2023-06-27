@@ -13,9 +13,11 @@ body{
     display: flex;   
     justify-content: space-around;
     text-align: center;
+    
     padding: 20px 50px;
     align-items: center;
     border-bottom: 1px solid #eee;
+    width: auto;
 }
 
 .menu-lines{
