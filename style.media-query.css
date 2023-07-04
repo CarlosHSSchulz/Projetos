@@ -83,7 +83,7 @@
     }
     
     .navbar .menu-faketrigger:checked ~ ul{
-        margin-left: 0;
+        margin-right: 0;
     }
     
     .box{
