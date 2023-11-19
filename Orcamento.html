@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style_quem_somos.css">
+    <link rel="stylesheet" href="./Style-login.css">
     <link rel="stylesheet" href="./estilo_barra2.css">
     <link rel="stylesheet" href="./style_footer.css">
     <link rel="stylesheet" href="./style-barra-tarefas.css">
     <link rel="stylesheet" href="./style.media-query.css" media="all">
     <link rel="stylesheet" href="./style.media-query2.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./style_cadastro2.css">
-    <title>Cadastro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="./style_orcamento.css">
+    <title>GTC Suprimentos Industriais</title>
 </head>
 <body>
     <header>
@@ -24,13 +26,13 @@
                 <span></span>
             </div>
             <div class="navbar_logo">
-                <a href="./barra_de_tarefas2.html">
+                <a href="./index.html">
                         <img src="./images/logo.png.png"/>
                 </a>
             </div>
             <ul class="navbar_menu">
                 <li class="navbar_item">
-                    <a href="./barra_de_tarefas2.html" class="dropdown">Home</a>
+                    <a href="./index.html" class="dropdown">Home</a>
                 </li>
                 <li class="navbar_item">
                     <a href="#" class="dropdown">Empresa</a>
@@ -70,7 +72,7 @@
                                 </div>
                             </div>
                             </a>
-                            <a href="./tela_produtos.html"> 
+                            <a href="./tela_produtos.html">
                             <div class="submenu_item">
                                 <p><i class="fa fa-lightbulb-o" aria-hidden="true"></i></p>
                                 <div class="organized">
@@ -110,12 +112,12 @@
                     </div>
                 </li>
                 <li class="navbar_item">
-                    <a href="#" class="dropdown">Orçamento</a>
+                    <a href="#" class="dropdown">Orçamentos</a>
                     <div class="submenu">
                         <div class="submenu_itens">
                             <div class="submenu_item">
                                 <p><i class="fa-solid fa-cart-shopping"></i></p>
-                                <a href="./tela_orcamento.html"><div class="organized">
+                                <a href="./Orcamento.html"><div class="organized">
                                     <h4>Orçamentos</h4>
                                     <h5>Solicite um Orçamento</h5>
                                 </div></a>
@@ -123,74 +125,148 @@
                         </div>
                     </div>
                 </li>              
-                <li class="navbar_item"><a href="./tela_login.html">Entrar</a></li>
+                <li class="navbar_item"><a href="/Login.html">Entrar</a></li>
             </ul>  
         </nav>
     </header>
-    <main>
-        <div class="box">
-            <form method="POST" action="cadastro2.php">
-                    <legend class="legendCadastro"><b>Cadastro de Usuários</b></legend>
-                    <br>
-                    <div class="inputBox">
-                        <input type="text" name="nome" id="nome" class="inputUser" required>
-                        <label for="nome" class="labelInput">Nome Completo</label>
-                    </div>
-                    <br><br>
-                    <div class="inputBox">
-                        <input type="text" name="email" id="email" class="inputUser" required>
-                        <label for="email" class="labelInput">Email</label>
-                    </div>
-                    <br><br>
-                    <div class="inputBox">
-                        <input type="tel" name="telefone" id="telefone" class="inputUser" required>
-                        <label for="telefone" class="labelInput">Telefone</label>
-                    </div>
-                    <br>
-                    <p>Sexo:</p>
-                    <br>
-                    <input type="radio" id="feminino" name="genero" value="feminino" required>
-                    <label for="feminino">Feminino</label><br>
-                    <input type="radio" id="masculino" name="genero" value="masculino" required>
-                    <label for="masculino">Masculino</label><br>
-                    <input type="radio" id="outro" name="genero" value="outro" required>
-                    <label for="outro">Outro</label><br>
-                        <br><br>
-                        <label for="data_nascimento"><b>Data de nascimento:</b></label>
-                        <input type="date" name="data_nascimento" id="data_nascimento" required>
-                    <br><br>
-                    <br><br>
-                    <div class="inputBox">
-                        <input type="password" name="password" id="password" class="inputUser" required>
-                        <label for="password" class="labelInput">Crie uma senha </label>
-                        <i class="fa fa-eye" onclick="verSenha()" aria-hidden="true"></i>
-                    </div>
-                    <br><br>
-                    <div class="inputBox">
-                        <input type="password" name="confirm_password" id="confirm_password" class="inputUser" required>
-                        <label for="confirm_password" class="labelInput">Digite novamente a senha escolhida</label>
-                        <i class="fa fa-eye" onclick="verConfirmSenha()" aria-hidden="true"></i>
-                    </div>
-                    <br><br>
-                    <div class="inputBox">
-                        <input type="text" name="cidade" id="cidade" class="inputUser" required>
-                        <label for="cidade" class="labelInput">Cidade</label>
-                    </div>
-                    <br><br>
-                    <div class="inputBox">
-                        <input type="text" name="estado" id="estado" class="inputUser" required>
-                        <label for="estado" class="labelInput">Estado</label>
-                    </div>
-                    <br><br>
-                    <div class="inputBox">
-                        <input type="text" name="endereco" id="endereco" class="inputUser" required>
-                        <label for="endereco" class="labelInput">Endereço</label>
-                    </div>
-                    <br><br>
-                    <input type="submit" name="submit" value="Gravar" id="submit"/>
-            </form>
+    <div class="banner_abertura">
+        <h1>Orçamentos</h1>
+    </div>
+    <p class="desc-orcamento">
+        Está precisando de um orçamento? Preencha todos os campos abaixo e em breve
+nossos especialistas entrarão em contato com você.
+
+    </p>
+    <div class="containerForm">
+        <section class="header_form">
+            <h4>Solicite um Orçamento</h4>
+        </section>
+    <form id="form" class="form">
+            <div class="form-content">
+                <div class="body_form">
+                    <label for="username">Nome do usuário*</label>
+                    <input
+                        type="text" id="username" placeholder="Digite seu nome completo..."
+                    />
+                    <spam>Aqui vai a mensagem de erro...</spam>
+                </div>
+            </div>
+        <div class="org_grid">
+            <div class="form-content">
+                <div class="body_form">
+                    <label for="email">Email*</label>
+                    <input
+                        type="email" id="email" placeholder="Digite seu email..."
+                    />
+                    <spam>Aqui vai a mensagem de erro...</spam>
+                </div>
+            </div>
+            <div class="form-content">
+                <div class="body_form">
+                    <label for="empresa">Empresa</label>
+                    <input
+                        type="text" id="empresa" placeholder="Digite o nome de sua empresa..."
+                    />
+                    <spam>Aqui vai a mensagem de erro...</spam>
+                </div>
+            </div>
+            <div class="form-content">
+                <div class="body_form">
+                    <label for="CPF/CNPJ">CPF/CNPJ*</label>
+                    <input
+                        type="number" id="CPF/CNPJ" placeholder="Digite seu CPF/CNPJ..."
+                    />
+                    <spam>Aqui vai a mensagem de erro...</spam>
+                </div>
+            </div>
+            <div class="form-content">
+                <div class="body_form">
+                    <label for="fone">Telefone*</label>
+                    <input
+                        type="number" id="fone" placeholder="Digite seu telefone para contato..."
+                    />
+                    <spam>Aqui vai a mensagem de erro...</spam>
+                </div>
+            </div>
+            <div class="form-content">
+                <div class="body_form">
+                    <label for="proficao">Profissão</label>
+                    <input
+                        type="text" id="proficao" placeholder="Digite sua profissão..."
+                    />
+                    <spam>Aqui vai a mensagem de erro...</spam>
+                </div>
+            </div>
+            <div class="form-content">
+                <div class="body_form">
+                    <label for="cidade">Cidade*</label>
+                    <input
+                        type="text" id="cidade" placeholder="Digite sua cidade..."
+                    />
+                    <spam>Aqui vai a mensagem de erro...</spam>
+                </div>
+            </div>
+            <div class="form-content">
+                <div class="body_form">
+                    <label for="estado">Estado*</label>
+                    <select class="select-estado" id="estado">
+                        <option value="">Selecione</option>
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espirito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                    </select>
+                    <spam>Aqui vai a mensagem de erro...</spam>
+                </div>
+            </div>
+            <div class="form-content">
+                <div class="body_form">
+                    <label for="setor_contato">Setor para contato*</label>
+                    <select class="select-estado">
+                        <option value="">Selecione</option>
+                        <option value="comercial">Comercial/ Atendimento</option>
+                        <option value="financeiro">Financeiro</option>
+                        <option value="logistica">Logística</option>
+                        <option value="compras">Compras</option>
+                    </select>
+                    <spam>Aqui vai a mensagem de erro...</spam>
+                </div>
+            </div>
         </div>
-    </main>
+            <div class="form-content">
+                <div class="body_form">
+                    <label for="desc_produto">Descreva o produto de seu interesse*</label>
+                    <textarea rows="20" cols="80">
+                    </textarea>
+                    <spam>Aqui vai a mensagem de erro...</spam>
+                </div>
+            </div>
+            <button type="submit" class="button">Enviar</button>
+    </form>
+    </div>
     <footer>
         <div id="footer_content">
             <div id="footer_contact">
@@ -246,7 +322,7 @@
                 <h1>Orçamento</h1>
                 <li>
                     <p class="link_arrow"><i class="fa-solid fa-chevron-right"></i></p>
-                    <a href="./tela_orcamento.html" class="Product_link">Solicite um Orçamento</a>
+                    <a href="#" class="Product_link">Solicite um Orçamento</a>
                 </li>
             </ul>
         </div>
@@ -263,7 +339,7 @@
             </div>
         </a>
     </div>
-    <script src="script-cadastro.js"></script>
+    <script src="./script-cadastro.js"></script>
     <script src="barra2.js"></script>
 </body>
 </html>
